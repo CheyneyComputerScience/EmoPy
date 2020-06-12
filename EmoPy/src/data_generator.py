@@ -2,7 +2,8 @@ from keras import backend as K
 
 from EmoPy.library.image import ImageDataGenerator
 
-K.set_image_dim_ordering('th')
+#K.set_image_dim_ordering('th')
+K.set_image_data_format('channels_first')
 
 
 class DataGenerator:

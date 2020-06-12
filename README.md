@@ -61,16 +61,18 @@ Before beginning, if you do not have Homebrew installed run this command to inst
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-EmoPy runs using Python 3.6 and up, theoretically on any Python-compatible OS. We tested EmoPy using Python 3.6.6 on OSX. 
+EmoPy runs using Python 3.6 and up, theoretically on any Python-compatible OS. This fork of EmoPy was tested using Python 3.8.3 on macOS Catalina. 
 
-There are 2 ways you can install Python 3.6.6:
+There are 2 ways you can install Python 3.8.3:
 
-1. Directly from the [Python website] (https://www.python.org/downloads/release/python-366/), or
+1. Directly from the [Python website] (https://www.python.org/downloads/) and get the latest
+   - on macOS run `/Applications/Python\ 3.8/Install\ Certificates.command` on the command line
+   - or
 2. Using [pyenv] (https://github.com/pyenv/pyenv):
 
 ```
 $ brew install pyenv
-$ pyenv install 3.6.6
+$ pyenv install 3.8.3
 ``` 
 
 GraphViz is required for visualisation functions.
@@ -79,6 +81,8 @@ GraphViz is required for visualisation functions.
 brew install graphviz
 ```
 
+------
+**OPTIONAL STEPS FOR VIRTUAL ENVIRONMENT:**  
 The next step is to set up a virtual environment using virtualenv. Install virtualenv with sudo.
 ```
 sudo pip install virtualenv
@@ -103,28 +107,24 @@ Your terminal command line should now be prefixed with ```(venv)```.
 
 (To deactivate the virtual environment run ```deactivate``` in the command line. You'll know it has been deactivated when the prefix ```(venv)``` disappears.)
 
+-----
 ## Installation
 
 
-### From PyPi
-Once the virtual environment is activated, you may install EmoPy using
-```
-pip install EmoPy
-```
 
 ### From the source
 
 Clone the directory and open it in your terminal.
 
 ```
-git clone https://github.com/thoughtworksarts/EmoPy.git
+git clone https://github.com/CheyneyComputerScience/EmoPy.git
 cd EmoPy
 ```
 
 Install the remaining dependencies using pip.
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Now you're ready to go!
@@ -135,7 +135,7 @@ Now you're ready to go!
 You can run the tests with:
 
 ```
-python EmoPy/tests/run_all.py
+python3 EmoPy/tests/run_all.py
 ```
 
 We encourage improvements and additions to these tests! 
@@ -145,10 +145,6 @@ We encourage improvements and additions to these tests!
 
 You can find example code to run each of the current neural net classes in [examples](EmoPy/examples). You may either download the example directory to a location of your choice on your machine, or find the example directory included in the installation.
 
-If you choose to use the installed package, you can find the examples directory by starting in the virtual environment directory you created and typing:
-```
-cd lib/python3.6/site-packages/EmoPy/examples
-```
 
 
 The best place to start is the [FERModel example](EmoPy/examples/fermodel_example.py). Here is a listing of that code:

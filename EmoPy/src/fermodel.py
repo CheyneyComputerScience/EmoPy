@@ -1,9 +1,18 @@
 from keras.models import load_model
 import cv2
 from scipy import misc
+import imageio
 import numpy as np
 import json
 from pkg_resources import resource_filename
+
+
+from EmoPy.src.backend_helper import _get_available_gpus
+# from https://github.com/keras-team/keras/issues/13684#issuecomment-595054461
+import keras.backend.tensorflow_backend as tfback
+tfback._get_available_gpus = _get_available_gpus
+
+
 
 class FERModel:
     """
@@ -50,7 +59,7 @@ class FERModel:
 
         :param images: image file (jpg or png format)
         """
-        image = misc.imread(image_file)
+        image = imageio.imread(image_file)
         return self.predict_from_ndarray(image)
 
     def predict_from_ndarray(self, image_array):

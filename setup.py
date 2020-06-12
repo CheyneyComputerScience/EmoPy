@@ -15,13 +15,13 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[
-        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.8",
         "Operating System :: MacOS :: MacOS X"
     ],
     python_requires='>=3.6.3',
     install_requires=[
        'coverage==4.5.3',
-       'keras==2.2.4',
+       'keras>=2.3.1',
        'lasagne',
        'pytest',
        'matplotlib>2.1.0',
@@ -29,8 +29,8 @@ setuptools.setup(
        'scikit-image>=0.13.1',
        'scikit-learn>=0.19.1',
        'scikit-neuralnetwork>=0.7',
-       'scipy==1.0.0',
-       'tensorflow==1.13.1',
+       'scipy>=1.0.0',
+       'tensorflow>=1.13.1',
        'opencv-python',
        'h5py',
        'pydot',
