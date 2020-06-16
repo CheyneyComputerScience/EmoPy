@@ -76,7 +76,7 @@ class FERModel:
         prediction = self.model.predict(final_image)
         # Return the dominant expression
         dominant_expression = self._print_prediction(prediction[0])
-        return dominant_expression
+        return prediction
 
     def _check_emotion_set_is_supported(self):
         """
@@ -118,6 +118,7 @@ class FERModel:
             model_file = 'models/conv_model_%s.hdf5' % model_suffix
         emotion_map_file = 'models/conv_emotion_map_%s.json' % model_suffix
         emotion_map = json.loads(open(resource_filename('EmoPy', emotion_map_file)).read())
+        print("model_file =",model_file)
         return load_model(resource_filename('EmoPy', model_file)), emotion_map
 
     def _print_prediction(self, prediction):

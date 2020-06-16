@@ -28,7 +28,7 @@ The `fermodel.py` module uses pre-trained models for FER prediction, making it t
 
 Each of the modules contains one class, except for `neuralnets.py`, which has one interface and five subclasses. Each of these subclasses implements a different neural net architecture using the Keras framework with Tensorflow backend, allowing you to experiment and see which one performs best for your needs.
 
-The [EmoPy documentation](https://emopy.readthedocs.io/) contains detailed information on the classes and their interactions. Also, an overview of the different neural nets included in this project is included below.
+The [EmoPy documentation](EmoPy/docs/_build/html/index.html) contains detailed information on the classes and their interactions. Also, an overview of the different neural nets included in this project is included below.
 
 ## Operating Constraints
 
