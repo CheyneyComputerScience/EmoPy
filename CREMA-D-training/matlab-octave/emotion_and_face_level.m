@@ -1,5 +1,7 @@
 % this is an octave forge package
 % download from: https://octave.sourceforge.io/io/
+% after downloading, install with command: 
+% pkg install '~/Downloads/io-2.6.1.tar.gz'
 pkg load io
 
 adjusted_txt_file = adjust_file;
