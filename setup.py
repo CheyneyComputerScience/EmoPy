@@ -1,6 +1,6 @@
 import setuptools
 
-with open("README.md","r") as fh:
+with open("README.md","r",encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
@@ -21,7 +21,7 @@ setuptools.setup(
     python_requires='>=3.6.3',
     install_requires=[
        'coverage==4.5.3',
-       'keras>=2.3.1',
+       'keras==2.3.1',
        'lasagne',
        'pytest',
        'matplotlib>2.1.0',
